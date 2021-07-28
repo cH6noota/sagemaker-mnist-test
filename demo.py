@@ -10,7 +10,7 @@ num_samples = 5
 indices = random.sample(range(x_test.shape[0] - 1), num_samples)
 images, labels = x_test[indices]/255, y_test[indices]
 
-endpoint = "sagemaker-tensorflow-scriptmode-2021-07-28-05-30-35-308"
+endpoint = ""  # endpoint name
 client = boto3.client('sagemaker-runtime')
 
 response = client.invoke_endpoint(
